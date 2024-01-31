@@ -115,6 +115,8 @@ function deleteAlarm(click_id){
     var deleteIndex = alarmListArr.indexOf(document.querySelector("#span"+click_id).innerText);
     alarmListArr.splice(deleteIndex,1);
     element.remove();
+    ring.pause();
+    document.querySelector("#stopAlarm").style.visibility= "hidden";
 }
 
 function stopAlarm(){
